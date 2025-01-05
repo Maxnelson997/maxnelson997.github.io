@@ -14,24 +14,31 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            height: 100vh;
             background-color: #f4f4f9;
         }
 
         .content {
-            width: 50%;
-            /* Content takes 50% of the screen width */
+            width: 80%;
+            /* Content takes 80% of the screen width by default */
+            max-width: 800px;
+            /* Maximum width to avoid too wide content */
             padding: 5%;
             /* Padding of 1/4 of the page on each side */
             box-sizing: border-box;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin: 0;
             color: #333;
             text-align: center;
             /* Center the h1 text */
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            color: #333;
         }
 
         p {
@@ -47,6 +54,36 @@
             border: 1px solid #ccc;
             margin-top: 1rem;
         }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .content {
+                width: 90%;
+                /* Content takes 90% of the screen width on small screens */
+            }
+
+            h1 {
+                font-size: 2rem;
+                /* Adjust font size for smaller screens */
+            }
+
+            p {
+                font-size: 1rem;
+                /* Adjust font size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+                /* Further reduce font size on very small screens */
+            }
+
+            p {
+                font-size: 0.9rem;
+                /* Further reduce font size on very small screens */
+            }
+        }
     </style>
 </head>
 
@@ -54,13 +91,21 @@
     <div class="content">
         <h1>Privacy Policy</h1>
         <hr>
-        <p>Privacy Policy<br><br>
-            Effective Date: January 4, 2025<br><br>
-            College GPA Calculator does not collect, store, or share any personal data. The app operates entirely
-            offline without integrating third-party services, ads, or analytics. However, the app includes In-App
-            Purchases and Subscriptions, which are managed securely through the Apple App Store. We do not process or
-            store payment information; all transactions are handled by Apple. Your activity within the app remains
-            private and secure. For any questions, contact us at maxnelson997@gmail.com.</p>
+
+        <h2>Introduction</h2>
+        <p>Effective Date: January 4, 2025</p>
+
+        <h2>Data Collection</h2>
+        <p>College GPA Calculator does not collect, store, or share any personal data. The app operates entirely offline
+            without integrating third-party services, ads, or analytics.</p>
+
+        <h2>In-App Purchases</h2>
+        <p>The app includes In-App Purchases and Subscriptions, which are managed securely through the Apple App Store.
+            We do not process or store payment information; all transactions are handled by Apple.</p>
+
+        <h2>Privacy Assurance</h2>
+        <p>Your activity within the app remains private and secure. For any questions, contact us at
+            maxnelson997@gmail.com.</p>
     </div>
 </body>
 
